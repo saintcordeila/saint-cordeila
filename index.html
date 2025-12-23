@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Saint Cordeila</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- GOOGLE FONTS -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #fafafa;
+      color: #111;
+      font-family: 'Inter', sans-serif;
+    }
+
+    header {
+      display: flex;
+      justify-content: center;
+      padding: 48px 0 32px;
+    }
+
+    header img {
+      width: 170px;
+    }
+
+    .products {
+      max-width: 1200px;
+      margin: auto;
+      padding: 40px 24px 80px;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+      gap: 48px;
+    }
+
+    .product {
+      text-align: center;
+    }
+
+    .product img {
+      width: 100%;
+      border-radius: 14px;
+      transition: transform 0.35s ease;
+      cursor: pointer;
+    }
+
+    .product img:hover {
+      transform: scale(1.035);
+    }
+
+    .product h3 {
+      margin: 16px 0 6px;
+      font-family: 'Playfair Display', serif;
+      font-size: 18px;
+      font-weight: 600;
+      letter-spacing: 0.4px;
+    }
+
+    .product button {
+      margin-top: 10px;
+      padding: 10px 22px;
+      background: #111;
+      color: white;
+      border: none;
+      border-radius: 24px;
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .product button:hover {
+      background: #333;
+    }
+
+    @media (max-width: 600px) {
+      header {
+        padding-top: 36px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- LOGO -->
+  <header>
+    <img src="logo.png" alt="Saint Cordeila Logo">
+  </header>
+
+  <!-- PRODUCTS -->
+  <section class="products">
+
+    <!-- NOCTURNE TEE -->
+    <div class="product">
+      <img src="nocturne_front.jpg"
+           onmouseover="this.src='nocturne_back.jpg'"
+           onmouseout="this.src='nocturne_front.jpg'">
+      <h3>Nocturne Tee</h3>
+      <button>Buy Now</button>
+    </div>
+
+    <!-- ECRU SIGIL TEE -->
+    <div class="product">
+      <img src="ecru_front.jpg"
+           onmouseover="this.src='ecru_back.jpg'"
+           onmouseout="this.src='ecru_front.jpg'">
+      <h3>Ecru Sigil Tee</h3>
+      <button>Buy Now</button>
+    </div>
+
+    <!-- CITADEL TROUSERS -->
+    <div class="product">
+      <img src="citadel.jpg">
+      <h3>Citadel Trousers</h3>
+      <button>Buy Now</button>
+    </div>
+
+    <!-- EMBLEM TROUSERS -->
+    <div class="product">
+      <img src="emblem.jpg">
+      <h3>Emblem Trousers</h3>
+      <button>Buy Now</button>
+    </div>
+
+  </section>
+
+</body>
+</html>
